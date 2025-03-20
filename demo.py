@@ -1,10 +1,8 @@
-import streamlit as st
 import pandas as pd
+import streamlit as st
 
-# Reemplaza 'SalidaFinal.xlsx' con la ruta correcta a tu archivo
-df = pd.read_excel('SalidaFinal.xlsx')
+# Reemplaza 'SalidaFinalVentas.xlsx' con la ruta correcta a tu archivo
+df = pd.read_excel('SalidaFinalVentas.xlsx')
 
-# Imprime las primeras filas del DataFrame para verificar que se haya leído correctamente
-# print(df.head()) 
-
-st.dataframe(df)
+# Muestra el DataFrame usando Streamlit
+st.dataframe(df) 
