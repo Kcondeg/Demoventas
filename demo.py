@@ -125,18 +125,3 @@ try:
                               barmode='stack',
                               facet_col='Category')
     st.plotly_chart(fig_bar_category)
-
-    # Crea la gráfica de barras apiladas por categoría y subcategoría
-    fig_bar_category = px.bar(sales_by_year_category_subcategory, 
-                              x='Category', 
-                              y='Sales', 
-                              color='Sub-Category',
-                              title='Ventas Acumuladas por Año, Categoría y Sub-Categoría (Barras)',
-                              labels={'Sales': 'Ventas', 'Year': 'Año', 'Category': 'Categoría', 'Sub-Category': 'Sub-Categoría'},
-                              barmode='stack',
-                              facet_col='Year')
-    st.plotly_chart(fig_bar_category)
-except FileNotFoundError:
-    st.error("Error: El archivo 'SalidaFinal.xlsx' no se encuentra.")
-except Exception as e:
-    st.error(f"Error al leer el archivo o generar la gráfica: {e}")
